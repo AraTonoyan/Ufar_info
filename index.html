@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>French University in Armenia (UFAR) | Université Française en Arménie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-deep: #002B5C;
+            --blue-mid: #1a4a8a;
+            --blue-light: #2d6cc0;
+            --red: #C8102E;
+            --red-light: #e63950;
+            --gold: #C09040;
+            --gold-light: #e8c570;
+            --cream: #faf8f4;
+            --cream-2: #f2ede4;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #2e3d5c;
+            --text-soft: #5a6780;
+            --border: #ddd8cc;
+            --shadow: rgba(0,43,92,0.10);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--cream);
+            font-family: 'Source Serif 4', Georgia, serif;
+            color: var(--text-dark);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* ─── NAV ─────────────────────────────── */
+        nav {
+            background: var(--blue-deep);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--red);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav-inner a {
+            color: rgba(255,255,255,0.78);
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.9rem 1.1rem;
+            white-space: nowrap;
+            border-right: 1px solid rgba(255,255,255,0.07);
+            transition: color 0.2s, background 0.2s;
+        }
+        .nav-inner a:hover { color: var(--gold-light); background: rgba(255,255,255,0.06); }
+
+        /* ─── HERO ────────────────────────────── */
+        .hero {
+            background: linear-gradient(135deg, var(--blue-deep) 0%, #0a1e45 55%, #1a0a0a 100%);
+            color: white;
+            padding: 5rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 40px,
+                rgba(255,255,255,0.015) 40px,
+                rgba(255,255,255,0.015) 41px
+            );
+        }
+        .hero::after {
+            content: 'UFAR';
+            position: absolute;
+            right: -2rem;
+            bottom: -3rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 16rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.04);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-flags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .flag {
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 0.5rem;
+        }
+        .hero h1 span { color: var(--gold-light); }
+        .hero-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.55);
+            text-transform: uppercase;
+            margin-bottom: 1.8rem;
+        }
+        .hero-desc {
+            max-width: 680px;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .hero-stat strong {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--gold-light);
+            line-height: 1;
+        }
+        .hero-stat span {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.55);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ─── LAYOUT ──────────────────────────── */
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+        }
+
+        /* ─── SECTION ─────────────────────────── */
+        .section {
+            margin-bottom: 4rem;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+        }
+        .section-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--blue-deep);
+            color: var(--gold-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        h2.section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--blue-deep);
+            font-weight: 700;
+            border-bottom: 2px solid var(--red);
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--blue-mid);
+            margin: 1.6rem 0 0.6rem;
+            font-weight: 600;
+        }
+        h4 {
+            font-size: 1.1rem;
+            color: var(--blue-mid);
+            font-weight: 600;
+            margin: 1.2rem 0 0.4rem;
+            font-family: 'Source Serif 4', serif;
+        }
+
+        p {
+            color: var(--text-mid);
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* ─── CARDS ───────────────────────────── */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            padding: 1.6rem;
+            box-shadow: 0 2px 16px var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px var(--shadow); }
+        .card-accent {
+            width: 38px;
+            height: 4px;
+            border-radius: 2px;
+            background: var(--red);
+            margin-bottom: 1rem;
+        }
+        .card h3 { margin-top: 0; font-size: 1.15rem; }
+        .card p { font-size: 0.93rem; margin-bottom: 0; }
+
+        /* ─── PROGRAM BLOCK ───────────────────── */
+        .program-block {
+            background: white;
+            border-radius: 16px;
+            border-left: 5px solid var(--blue-mid);
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 2px 12px var(--shadow);
+        }
+        .program-block.gold { border-left-color: var(--gold); }
+        .program-block h3 { margin-top: 0; color: var(--blue-deep); }
+        .program-block .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.7rem 0 1rem;
+        }
+        .badge {
+            background: var(--cream-2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.78rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-soft);
+            white-space: nowrap;
+        }
+        .badge.red { background: #fef0f0; border-color: #fcc; color: var(--red); }
+        .badge.blue { background: #eff4ff; border-color: #ccd9f5; color: var(--blue-mid); }
+        .badge.gold { background: #fdf7e8; border-color: #e8d49a; color: #7a5c00; }
+
+        /* ─── TABLE ───────────────────────────── */
+        .table-wrap { overflow-x: auto; margin: 1.2rem 0; border-radius: 12px; box-shadow: 0 2px 12px var(--shadow); }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th {
+            background: var(--blue-deep);
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.9rem 1.2rem;
+            text-align: left;
+        }
+        td { padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--text-mid); }
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) td { background: var(--cream); }
+        td strong { color: var(--blue-deep); }
+
+        /* ─── FAQ ─────────────────────────────── */
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.2rem 0;
+        }
+        .faq-item:first-child { padding-top: 0; }
+        .faq-q {
+            font-weight: 600;
+            color: var(--blue-deep);
+            font-family: 'Source Serif 4', serif;
+            margin-bottom: 0.5rem;
+            font-size: 1.02rem;
+        }
+        .faq-q::before { content: 'Q  '; color: var(--red); font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em; }
+        .faq-a { color: var(--text-mid); font-size: 0.97rem; }
+
+        /* ─── INFO BOX ────────────────────────── */
+        .info-box {
+            background: linear-gradient(135deg, var(--blue-deep) 0%, #0d2448 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+        }
+        .info-box h3 { color: var(--gold-light); margin-top: 0; }
+        .info-box p { color: rgba(255,255,255,0.82); }
+        .info-box a { color: var(--gold-light); }
+
+        /* ─── HIGHLIGHT ROW ───────────────────── */
+        .highlight-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-pill {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem 1.4rem;
+            flex: 1;
+            min-width: 160px;
+            text-align: center;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+        .highlight-pill strong {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            color: var(--red);
+            line-height: 1.1;
+        }
+        .highlight-pill span {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ─── CAREER TAGS ─────────────────────── */
+        .career-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.8rem 0;
+        }
+        .career-tag {
+            background: #eff4ff;
+            border: 1px solid #c5d5f0;
+            color: var(--blue-mid);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.84rem;
+        }
+
+        /* ─── TIMELINE ────────────────────────── */
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.65rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--blue-deep), var(--red));
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.88rem;
+            top: 0.35rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--red);
+            border: 2px solid white;
+            box-shadow: 0 0 0 3px var(--red);
+        }
+        .timeline-year {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--red);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+        .timeline-item h4 { margin-top: 0; color: var(--blue-deep); }
+
+        /* ─── TWO COL ─────────────────────────── */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+
+        /* ─── ACCREDITATION STRIP ─────────────── */
+        .accred-strip {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.4rem 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .accred-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-mid);
+        }
+        .accred-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--blue-mid);
+            flex-shrink: 0;
+        }
+
+        /* ─── CONTACT BLOCK ───────────────────── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+        .contact-item {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 1.4rem;
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .contact-item strong { display: block; color: var(--blue-deep); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace; margin-bottom: 0.3rem; }
+        .contact-item a, .contact-item span { color: var(--text-mid); font-size: 0.95rem; text-decoration: none; }
+        .contact-item a:hover { color: var(--blue-light); }
+
+        /* ─── DIVIDER ─────────────────────────── */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 2.5rem 0;
+        }
+
+        /* ─── FOOTER ──────────────────────────── */
+        footer {
+            background: var(--blue-deep);
+            color: rgba(255,255,255,0.65);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.88rem;
+            line-height: 1.7;
+        }
+        footer strong { color: var(--gold-light); }
+
+        /* ─── PRINT / RESPONSIVE ──────────────── */
+        @media (max-width: 680px) {
+            .wrapper { padding: 2rem 1.2rem; }
+            .hero { padding: 3.5rem 1.2rem 3rem; }
+            .program-block { padding: 1.3rem 1.4rem; }
+            .info-box { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="#overview">Overview</a>
+        <a href="#history">History</a>
+        <a href="#faculties">Faculties</a>
+        <a href="#bachelors">Bachelor's</a>
+        <a href="#masters">Master's</a>
+        <a href="#language">Language</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#tuition">Tuition</a>
+        <a href="#internships">Internships</a>
+        <a href="#student-life">Student Life</a>
+        <a href="#accreditation">Accreditation</a>
+        <a href="#partnerships">Partnerships</a>
+        <a href="#careers">Careers</a>
+        <a href="#news">News</a>
+        <a href="#faq">FAQ</a>
+        <a href="#numbers">Numbers</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="overview">
+    <div class="hero-inner">
+        <div class="hero-flags"><span class="flag">🇫🇷</span><span class="flag">🇦🇲</span></div>
+        <h1>French University<br>in <span>Armenia</span></h1>
+        <p class="hero-subtitle">Université Française en Arménie · UFAR · Հայաստանում Ֆրանսիական Համալսարան</p>
+        <p class="hero-desc">
+            A pioneering French-language higher education institution established in 2000 through bilateral collaboration between the governments of Armenia and France. Located in Yerevan, UFAR bridges European academic excellence with Armenian intellectual tradition, offering internationally recognized dual degrees and a gateway to the Francophone world.
+        </p>
+        <div class="hero-stats">
+            <div class="hero-stat"><strong>2,200+</strong><span>Students</span></div>
+            <div class="hero-stat"><strong>3,200+</strong><span>Alumni</span></div>
+            <div class="hero-stat"><strong>90%+</strong><span>Employment Rate</span></div>
+            <div class="hero-stat"><strong>5</strong><span>Faculties</span></div>
+            <div class="hero-stat"><strong>Est. 2000</strong><span>Founded</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN WRAPPER -->
+<div class="wrapper">
+
+    <!-- ─── OVERVIEW SECTION ─────────────────── -->
+    <section class="section" id="about">
+        <div class="section-header">
+            <div class="section-icon">🎓</div>
+            <h2 class="section-title">About UFAR</h2>
+        </div>
+
+        <p>
+            The French University in Armenia (UFAR; French: <em>Université Française en Arménie</em>; Armenian: <em>Հայաստանում Ֆրանսիական Համալսարան</em>) is a French-language higher education institution established in 2000 through a collaboration between the Armenian and French governments. Located in Yerevan, Armenia, at <strong>10 Davit Anhaght Street</strong> in the Kanaker-Zeytun district (the IMA branch is situated at 1 Paruyr Sevak Street, also in Kanaker-Zeytun), UFAR offers French-language instruction across various disciplines, blending French academic excellence with local cultural understanding.
+        </p>
+        <p>
+            According to Armenian law, UFAR operates as a <strong>foundation</strong> and enjoys the strong support of Armenian public authorities. The institution is officially recognized by the <strong>Ministry of Education, Science, Culture and Sport of the Republic of Armenia</strong> and is co-governed by representatives of the French Embassy, the French Ministry of Foreign Affairs, the Armenian Ministry of Foreign Affairs, and the Armenian Ministry of Education.
+        </p>
+        <p>
+            UFAR is unique among French-diploma-awarding institutions outside France: unlike comparable institutions such as Cairo University (which has only a French pro-rector) or the Hanoi Francophone Institute of Information Science, UFAR's regulations require that both the <strong>Rector and the Secretary General must be French nationals</strong>. The current Rector is <strong>Salwa Nacouzi</strong>.
+        </p>
+        <p>
+            The university awards dual state diplomas recognized by both Armenia and France — a feature embedded from UFAR's founding pedagogic principle. Its programs are designed to meet the needs of the Armenian labor market and the regional economy of the Caucasus, while simultaneously equipping graduates for careers in France, Europe, and beyond. Since 2003, UFAR has partnered with the <strong>Armenian General Benevolent Union (UGAB)</strong> to send deserving students for 7-week internships in French companies and public institutions, with more than 200 students having benefited from this program over 15 years.
+        </p>
+
+        <div class="highlight-row">
+            <div class="highlight-pill"><strong>2000</strong><span>Year Founded</span></div>
+            <div class="highlight-pill"><strong>#13</strong><span>In Armenia (2025)</span></div>
+            <div class="highlight-pill"><strong>#9,740</strong><span>World Rank (2025)</span></div>
+            <div class="highlight-pill"><strong>22:78</strong><span>Male/Female Ratio</span></div>
+            <div class="highlight-pill"><strong>65%</strong><span>Acceptance Rate</span></div>
+            <div class="highlight-pill"><strong>Dual</strong><span>State Diplomas</span></div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── HISTORY ──────────────────────────── -->
+    <section class="section" id="history">
+        <div class="section-header">
+            <div class="section-icon">📜</div>
+            <h2 class="section-title">History & Timeline</h2>
+        </div>
+
+        <p>UFAR's founding is rooted in a long history of Franco-Armenian diplomatic and cultural collaboration, formalized through a series of official agreements spanning the 1990s.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">1991</div>
+                <h4>Independence of Armenia</h4>
+                <p>Following the dissolution of the Soviet Union, the Republic of Armenia establishes diplomatic relations with France, laying the groundwork for educational cooperation.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">November 4, 1995</div>
+                <h4>Cultural Cooperation Agreement</h4>
+                <p>A landmark agreement on cultural, scientific, and technical collaboration is signed between Armenia and France, officially recognizing the desire of both governments to establish a joint higher education institution.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">November 23, 1998</div>
+                <h4>Founding Protocol</h4>
+                <p>A subsequent protocol is concluded between the Armenian Ministry of Education and the Embassy of France in Armenia, specifying the operational and pedagogic framework for the future university. Jean Moulin Lyon 3 University is designated as the primary French academic partner.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2000</div>
+                <h4>UFAR Established</h4>
+                <p>The French University in Armenia officially opens its doors, offering Bachelor's degrees in Law, Management, Finance, and Marketing. From the outset, UFAR adopts the principle of awarding dual Armenian and French state diplomas. The university becomes the <em>mainstay of Francophonie in Armenia</em>.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2003</div>
+                <h4>UGAB Internship Partnership Launched</h4>
+                <p>The Armenian General Benevolent Union (UGAB France) joins UFAR to offer 30 selected students annually the opportunity to complete their mandatory 7-week internship in French companies and public institutions, broadening the Franco-Armenian professional network.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2014</div>
+                <h4>TEMPUS & Erasmus+ Projects</h4>
+                <p>UFAR coordinates a TEMPUS project on "Promoting quality and recognition of transnational education in Armenia and Georgia" and an Erasmus+ project on Cycle 3 Quality Assurance, positioning itself as a regional leader in higher education quality standards.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">c. 2018</div>
+                <h4>Faculty of Computer Science (IMA) Expansion</h4>
+                <p>The Faculty of Computer Science and Applied Mathematics (known as IMA) is significantly expanded. A new dedicated building opens at 1 Paruyr Sevak Street, Kanaker-Zeytun, Yerevan. Bachelor's and Master's programs in Informatics and AI are developed in partnership with the University of Toulouse 3 Paul Sabatier.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2020–2022</div>
+                <h4>PRME Accreditation — First in Armenia</h4>
+                <p>UFAR becomes the first and only university in Armenia to receive international accreditation under the United Nations' <strong>Principles for Responsible Management Education (PRME)</strong> initiative, aligning with the UN Sustainable Development Goals.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <h4>Master's in AI with Toulouse 3 Paul Sabatier</h4>
+                <p>A new Master's program in Artificial Intelligence — the only AI Master's in Armenia with military deferment rights — is offered in partnership with the University of Toulouse 3 Paul Sabatier, with instruction in English and French.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <h4>WBL4JOB Conference & Work-Based Learning</h4>
+                <p>UFAR hosts the concluding WBL4JOB conference (November 20–22) for the EU-funded project "Introducing work-based learning in higher education systems of Armenia and Moldova for better graduate employability," with participation from the University of Strasbourg, IMC University of Applied Sciences, and Lyon 3. The Apprenticeships Higher Education Model (AHEM) is showcased.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <h4>Dual Accreditation & European Quality Forum</h4>
+                <p>UFAR's double accreditation is highlighted at the European Quality Assurance Forum. PhD programs in Law, Marketing, and Management are listed as available postgraduate pathways. Applications for the 2025–2026 academic year open March 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── FACULTIES ────────────────────────── -->
+    <section class="section" id="faculties">
+        <div class="section-header">
+            <div class="section-icon">🏛️</div>
+            <h2 class="section-title">Faculties & Departments</h2>
+        </div>
+
+        <p>As of 2025, UFAR operates <strong>five faculties</strong> offering both Bachelor's and Master's degrees. The university also offers <strong>PhD programs</strong> in Law, Marketing, and Management at the postgraduate level.</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>⚖️ Faculty of Law</h3>
+                <p>Covers Armenian public and private law, international law, and (from year 3) French law. Strong emphasis on legal research methodology, oral defense, and contract drafting. Dual diplomas with Jean Moulin Lyon 3 University. Career paths span advocacy, judiciary, notarial practice, NGOs, and international organizations.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>📊 Faculty of Management</h3>
+                <p>In-depth theoretical knowledge in management and economics. Prepares economists, managers, and financial executives with skills for Armenian and French banks, insurance companies, and financial institutions. Motivates academic and practical research. Dual diplomas with Jean Moulin Lyon 3 University.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>💰 Faculty of Finance</h3>
+                <p>Prepares specialists in finance, auditing, banking, and insurance. The 4th-year includes an extended 26-week internship (7 weeks full-time + part-time). Languages: Armenian in years 1–2, Armenian and French in years 3–4. Dual diplomas with Jean Moulin Lyon 3 University.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>📣 Faculty of Marketing</h3>
+                <p>Provides fundamental and advanced knowledge in marketing, sales, management, and decision-making aligned with national and international professional standards. Involves representatives of leading companies in teaching. Covers digital business, brand management, and international trade. Dual diplomas with Jean Moulin Lyon 3 University.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>💻 Faculty of Computer Science & Applied Mathematics (IMA)</h3>
+                <p>Located at 1 Paruyr Sevak Street. The only AI Master's in Armenia offering military deferment rights. Strong practical component (one-third of the curriculum). Languages progress from Armenian (year 1) to English (year 2) to French & English (years 3–4). Partnership with University of Toulouse 3 Paul Sabatier for the AI Master's.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3>Postgraduate Programs (PhD)</h3>
+        <p>UFAR offers doctoral-level (PhD) programs in the following disciplines:</p>
+        <div class="career-list">
+            <span class="career-tag">PhD in Law</span>
+            <span class="career-tag">PhD in Marketing</span>
+            <span class="career-tag">PhD in Management</span>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── BACHELOR'S ───────────────────────── -->
+    <section class="section" id="bachelors">
+        <div class="section-header">
+            <div class="section-icon">📖</div>
+            <h2 class="section-title">Bachelor's Degree Programs</h2>
+        </div>
+
+        <p>All Bachelor's programs at UFAR follow the <strong>Bologna Process</strong> framework: 8 semesters, 240 ECTS credits, with mandatory internships. Upon graduation, students receive <strong>two state diplomas</strong> — one from UFAR (Armenian) and one from a French partner university.</p>
+
+        <!-- IMA -->
+        <div class="program-block">
+            <h3>💻 Bachelor's in Computer Science (IMA — Informatique et Mathématiques Appliquées)</h3>
+            <div class="meta">
+                <span class="badge blue">8 semesters</span>
+                <span class="badge blue">240 ECTS</span>
+                <span class="badge">In-person</span>
+                <span class="badge gold">Dual Diploma</span>
+                <span class="badge red">7-week internship</span>
+            </div>
+            <p>
+                An in-person program spanning 8 semesters (240 ECTS credits), with 6 semesters dedicated to the French Computer Science degree. The program provides in-depth theoretical knowledge in programming, systems, networks, databases, and computer architecture, with practical training comprising one-third of all coursework. At the end of the Bachelor's cycle, students complete a <strong>7-week internship</strong> in a host organization (in Armenia or abroad), and submit a written internship report for evaluation.
+            </p>
+            <h4>Languages of Instruction</h4>
+            <div class="career-list">
+                <span class="career-tag">1st Year: Armenian</span>
+                <span class="career-tag">2nd Year: English</span>
+                <span class="career-tag">3rd & 4th Years: French & English</span>
+            </div>
+            <h4>Career Prospects</h4>
+            <div class="career-list">
+                <span class="career-tag">Application Developer</span>
+                <span class="career-tag">Programmer</span>
+                <span class="career-tag">Project Manager</span>
+                <span class="career-tag">Information Security Officer</span>
+                <span class="career-tag">Database Administrator</span>
+                <span class="career-tag">Network Administrator</span>
+            </div>
+        </div>
+
+        <!-- LAW -->
+        <div class="program-block">
+            <h3>⚖️ Bachelor's in Law</h3>
+            <div class="meta">
+                <span class="badge blue">8 semesters</span>
+                <span class="badge blue">240 ECTS</span>
+                <span class="badge">In-person</span>
+                <span class="badge gold">Lyon 3 Dual Diploma</span>
+                <span class="badge red">7-week internship</span>
+            </div>
+            <p>
+                8 semesters, 240 ECTS; 6 semesters are dedicated to the French Law degree in collaboration with <strong>Jean Moulin Lyon 3 University</strong>. The curriculum spans Armenian public and private law, international law, and (from year 3) French law, with a strong focus on legal research methodology and oral defense. Students complete a <strong>7-week internship</strong> in a legal institution, law firm, or public organization in Armenia or abroad.
+            </p>
+            <h4>Entrance Exams</h4>
+            <div class="career-list">
+                <span class="career-tag">Social Studies</span>
+                <span class="career-tag">Armenian Language</span>
+            </div>
+            <h4>Career Prospects</h4>
+            <div class="career-list">
+                <span class="career-tag">Lawyer / Avocat</span>
+                <span class="career-tag">Notary</span>
+                <span class="career-tag">Judge (after competitions)</span>
+                <span class="career-tag">Legal Advisor (banks, NGOs, insurance)</span>
+                <span class="career-tag">International Organizations</span>
+                <span class="career-tag">National Security Services</span>
+                <span class="career-tag">Legal Research & Teaching</span>
+            </div>
+        </div>
+
+        <!-- MANAGEMENT -->
+        <div class="program-block">
+            <h3>📊 Bachelor's in Management</h3>
+            <div class="meta">
+                <span class="badge blue">8 semesters</span>
+                <span class="badge blue">240 ECTS</span>
+                <span class="badge">In-person</span>
+                <span class="badge gold">Lyon 3 Dual Diploma</span>
+                <span class="badge red">7-week internship</span>
+            </div>
+            <p>
+                8 semesters, 240 ECTS; 6 semesters dedicated to the French Management degree (Jean Moulin Lyon 3 University). The program provides in-depth theoretical knowledge in management and economics, preparing specialists as economists, managers, and financial executives. A <strong>7-week internship</strong> in a business-related organization (Armenia or abroad) is mandatory.
+            </p>
+            <h4>Entrance Exams</h4>
+            <div class="career-list">
+                <span class="career-tag">Mathematics</span>
+                <span class="career-tag">Foreign Language (French, English, or German)</span>
+                <span class="career-tag">OR Armenian Language</span>
+            </div>
+            <h4>Career Prospects</h4>
+            <div class="career-list">
+                <span class="career-tag">Economist</span>
+                <span class="career-tag">Financial Manager</span>
+                <span class="career-tag">Banking & Insurance Specialist</span>
+                <span class="career-tag">Financial Analyst</span>
+                <span class="career-tag">Financial Advisor</span>
+            </div>
+        </div>
+
+        <!-- MARKETING -->
+        <div class="program-block">
+            <h3>📣 Bachelor's in Marketing & Digital Business</h3>
+            <div class="meta">
+                <span class="badge blue">8 semesters</span>
+                <span class="badge blue">240 ECTS</span>
+                <span class="badge">In-person</span>
+                <span class="badge gold">Lyon 3 Dual Diploma</span>
+                <span class="badge red">7-week internship</span>
+            </div>
+            <p>
+                8 semesters, 240 ECTS; 6 semesters for the French Marketing & Digital Business degree (Jean Moulin Lyon 3 University). Combines theoretical and practical knowledge in marketing, sales, and decision-making. Representatives of leading companies participate in teaching. Students complete a <strong>7-week internship</strong> in a company, startup, or digital business environment. Digital marketing projects and an internship report are required.
+            </p>
+            <h4>Career Prospects</h4>
+            <div class="career-list">
+                <span class="career-tag">Organization / Company Manager</span>
+                <span class="career-tag">Commercial Director</span>
+                <span class="career-tag">Marketing / Sales Director</span>
+                <span class="career-tag">Advertising Agency Director</span>
+                <span class="career-tag">International Trade Manager</span>
+                <span class="career-tag">PR Manager</span>
+                <span class="career-tag">Brand Manager</span>
+                <span class="career-tag">Project Manager</span>
+                <span class="career-tag">Merchandiser</span>
+                <span class="career-tag">Business Analyst</span>
+            </div>
+        </div>
+
+        <!-- FINANCE -->
+        <div class="program-block gold">
+            <h3>💰 Bachelor's in Finance</h3>
+            <div class="meta">
+                <span class="badge blue">8 semesters</span>
+                <span class="badge blue">240 ECTS</span>
+                <span class="badge">Full-time</span>
+                <span class="badge gold">Lyon 3 Dual Diploma</span>
+                <span class="badge red">26-week internship (final year)</span>
+            </div>
+            <p>
+                Full-time program, 8 semesters, 240 ECTS. The Finance program has an <strong>extended internship structure</strong> in the final year: 26 weeks total — 7 weeks full-time and the remainder part-time — at an organization in Armenia or abroad. An internship report is evaluated. The dual diploma is awarded in partnership with <strong>Jean Moulin Lyon 3 University</strong>.
+            </p>
+            <h4>Languages of Instruction</h4>
+            <div class="career-list">
+                <span class="career-tag">1st & 2nd Years: Armenian</span>
+                <span class="career-tag">3rd & 4th Years: Armenian & French</span>
+            </div>
+            <h4>Career Prospects</h4>
+            <div class="career-list">
+                <span class="career-tag">Financial Manager</span>
+                <span class="career-tag">Accountant</span>
+                <span class="career-tag">Auditor</span>
+                <span class="career-tag">Financial Analyst</span>
+                <span class="career-tag">Statistician-Economist Analyst</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── MASTER'S ──────────────────────────── -->
+    <section class="section" id="masters">
+        <div class="section-header">
+            <div class="section-icon">🔬</div>
+            <h2 class="section-title">Master's Degree Programs</h2>
+        </div>
+
+        <p>All Master's programs at UFAR consist of <strong>4 semesters (120 ECTS)</strong> and are offered on a full-time basis. Master's-level courses are often scheduled <strong>after 18:00</strong> to accommodate working professionals. Internships, individual thesis supervision, and dual diplomas are standard across all programs.</p>
+
+        <!-- AI MASTER'S -->
+        <div class="program-block">
+            <h3>🤖 Master's in Computer Science — Artificial Intelligence</h3>
+            <div class="meta">
+                <span class="badge blue">4 semesters</span>
+                <span class="badge blue">120 ECTS</span>
+                <span class="badge gold">Toulouse 3 Paul Sabatier Dual Diploma</span>
+                <span class="badge">Instruction: English</span>
+                <span class="badge red">Min. 5-month internship (year 2)</span>
+                <span class="badge red">Military Deferment Eligible</span>
+            </div>
+            <p>
+                Organized in collaboration with the <strong>University of Toulouse 3 Paul Sabatier</strong>. This is the <strong>only AI Master's program in Armenia</strong> granting the right to military deferment (by government decision). The program develops high-level expertise across fields of artificial intelligence including digital image processing, computer graphics, natural language processing, information retrieval, robotics, and e-commerce.
+            </p>
+            <h4>Diplomas Awarded</h4>
+            <p>
+                Students receive two state diplomas: a French diploma from the University of Toulouse 3 Paul Sabatier with specialization in <em>"Artificial Intelligence: Foundations and Applications"</em>, and an Armenian diploma from UFAR with specialization in <em>"Artificial Intelligence Systems."</em>
+            </p>
+            <h4>Year 1 Professional Opportunities</h4>
+            <div class="career-list">
+                <span class="career-tag">2-month internship</span>
+                <span class="career-tag">Supervised project at university</span>
+                <span class="career-tag">Small group work (S8) — proposed by university or partner companies</span>
+                <span class="career-tag">Small group research (S8)</span>
+                <span class="career-tag">Group "Masterpiece" project (S9–S10)</span>
+            </div>
+            <h4>Year 2 Internship</h4>
+            <p>Minimum 5 months in a laboratory or company (Armenia or abroad).</p>
+            <h4>Career Fields</h4>
+            <div class="career-list">
+                <span class="career-tag">Aviation & Space</span>
+                <span class="career-tag">Healthcare</span>
+                <span class="career-tag">Agricultural Technology</span>
+                <span class="career-tag">Informatics</span>
+                <span class="career-tag">Automated Systems</span>
+                <span class="career-tag">Scientific Research</span>
+                <span class="career-tag">Future Cities (Smart City)</span>
+                <span class="career-tag">Industry 4.0</span>
+                <span class="career-tag">Robotics</span>
+                <span class="career-tag">Computer Graphics</span>
+            </div>
+        </div>
+
+        <!-- LAW MASTER'S -->
+        <div class="program-block">
+            <h3>⚖️ Master's in Law — International Business & Private Law</h3>
+            <div class="meta">
+                <span class="badge blue">4 semesters</span>
+                <span class="badge blue">120 ECTS</span>
+                <span class="badge gold">Lyon 3 Dual Diploma</span>
+                <span class="badge">Languages: Armenian, French, English</span>
+            </div>
+            <p>
+                Organized with <strong>Jean Moulin Lyon 3 University</strong>. Educates lawyers in international business and international private law, equipping them to compare major legal systems, understand international legal challenges, and apply dispute resolution methods. Teaching is delivered through lectures (CM) and practical sessions (TD) with groups not exceeding 40 students.
+            </p>
+            <h4>Internships</h4>
+            <div class="career-list">
+                <span class="career-tag">Year 1: 14-week internship</span>
+                <span class="career-tag">Year 2: 6-month mandatory internship</span>
+                <span class="career-tag">Year 2: Final thesis with individual supervisor</span>
+            </div>
+            <h4>Career Prospects</h4>
+            <div class="career-list">
+                <span class="career-tag">Lawyer / Advocate</span>
+                <span class="career-tag">Notary</span>
+                <span class="career-tag">Judge</span>
+                <span class="career-tag">Legal Advisor (banks, insurance, NGOs)</span>
+                <span class="career-tag">International Organizations & Courts</span>
+                <span class="career-tag">National Security Services</span>
+                <span class="career-tag">Legal Research & Teaching</span>
+            </div>
+        </div>
+
+        <!-- FINANCE MASTER'S -->
+        <div class="program-block gold">
+            <h3>💰 Master's in Management, Finance & Control</h3>
+            <div class="meta">
+                <span class="badge blue">4 semesters</span>
+                <span class="badge blue">120 ECTS</span>
+                <span class="badge gold">Lyon 3 Dual Diploma</span>
+                <span class="badge">Languages: Armenian & French</span>
+            </div>
+            <p>
+                In collaboration with <strong>Jean Moulin Lyon 3 University</strong>. Provides deep theoretical knowledge in economics, management, and finance; prepares specialists as economists, managers, and financial executives; and equips students for careers in Armenian and French banks, insurance companies, and other financial institutions. Supports the conduct of academic and practical research.
+            </p>
+            <h4>Internships</h4>
+            <div class="career-list">
+                <span class="career-tag">Year 1: 3-month internship + evaluative summary report</span>
+                <span class="career-tag">Year 2: 6-month internship + final thesis defense</span>
+            </div>
+            <h4>Career Prospects</h4>
+            <div class="career-list">
+                <span class="career-tag">Financial Manager</span>
+                <span class="career-tag">Accountant</span>
+                <span class="career-tag">Auditor</span>
+                <span class="career-tag">Financial Analyst</span>
+                <span class="career-tag">Statistician-Economist Analyst</span>
+                <span class="career-tag">Economist</span>
+                <span class="career-tag">Banking & Insurance Specialist</span>
+            </div>
+        </div>
+
+        <!-- MARKETING MASTER'S -->
+        <div class="program-block">
+            <h3>📣 Master's in Marketing & Sales</h3>
+            <div class="meta">
+                <span class="badge blue">4 semesters</span>
+                <span class="badge blue">120 ECTS</span>
+                <span class="badge gold">Lyon 3 Dual Diploma</span>
+                <span class="badge">Languages: Armenian & French</span>
+            </div>
+            <p>
+                In collaboration with <strong>Jean Moulin Lyon 3 University</strong>. Strong emphasis on marketing, sales, communication, and decision-making with direct company collaboration. Combines theoretical depth with practical engagement.
+            </p>
+            <h4>Internships</h4>
+            <div class="career-list">
+                <span class="career-tag">Year 1: 3-month internship</span>
+                <span class="career-tag">Year 2: 6-month internship (Armenia or abroad)</span>
+                <span class="career-tag">Year 2: Final thesis</span>
+            </div>
+            <h4>Career Paths</h4>
+            <div class="career-list">
+                <span class="career-tag">Commercial Director</span>
+                <span class="career-tag">Marketing / Sales Director</span>
+                <span class="career-tag">PR Manager</span>
+                <span class="career-tag">Brand Manager</span>
+                <span class="career-tag">Business Analyst</span>
+                <span class="career-tag">Advertising Agency Director</span>
+                <span class="career-tag">International Trade Manager</span>
+                <span class="career-tag">Project Manager</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── LANGUAGE ──────────────────────────── -->
+    <section class="section" id="language">
+        <div class="section-header">
+            <div class="section-icon">🗣️</div>
+            <h2 class="section-title">Language of Instruction & French Pathway</h2>
+        </div>
+
+        <div class="info-box">
+            <h3>No French Required at Admission</h3>
+            <p>Proficiency in French is <strong>not required</strong> to enroll at UFAR. The university provides a structured French language pathway that prepares students fully within the first two years of study.</p>
+        </div>
+
+        <p>
+            While French is the primary long-term language of instruction, UFAR's pedagogy is structured to accommodate students with no prior French knowledge. During the first two years, students study core subjects alongside <strong>intensive French language courses</strong>. Their acquired knowledge is assessed using an <strong>internationally recognized language test</strong>. The continuation of studies beyond year 2 is conditional on passing this test.
+        </p>
+        <p>
+            As a result, approximately <strong>90% of students</strong> who had not studied French before entering UFAR become capable of proceeding with their studies in French from the third year onward.
+        </p>
+        <p>
+            Thanks to visiting professors from <strong>Jean Moulin Lyon 3 University</strong> and <strong>Toulouse III - Paul Sabatier University</strong>, at least <strong>20% of undergraduate courses</strong> (from year 3) and approximately <strong>50% of graduate courses</strong> are conducted in French. After completing their mandatory internship in France, Belgium, or Armenia, students submit and orally defend their graduation thesis in French.
+        </p>
+
+        <div class="two-col">
+            <div>
+                <h3>Language Progression — Bachelor's (General)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Year</th><th>Language</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Year 1</strong></td><td>Armenian + intensive French</td></tr>
+                            <tr><td><strong>Year 2</strong></td><td>Armenian + intensive French (continued)</td></tr>
+                            <tr><td><strong>Year 3</strong></td><td>Armenian & French (≥20% French)</td></tr>
+                            <tr><td><strong>Year 4</strong></td><td>French, Armenian, and English</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h3>Language Progression — IMA (Computer Science)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Year</th><th>Language</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Year 1</strong></td><td>Armenian</td></tr>
+                            <tr><td><strong>Year 2</strong></td><td>English</td></tr>
+                            <tr><td><strong>Year 3</strong></td><td>French & English</td></tr>
+                            <tr><td><strong>Year 4</strong></td><td>French & English</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <h3>Master's Level — Language by Program</h3>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Program</th><th>Languages</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>M2 Computer Science / AI</strong></td><td>English (primary)</td></tr>
+                    <tr><td><strong>M2 Law — International Business</strong></td><td>Armenian, French, English</td></tr>
+                    <tr><td><strong>M2 Management, Finance & Control</strong></td><td>Armenian & French</td></tr>
+                    <tr><td><strong>M2 Marketing & Sales</strong></td><td>Armenian & French</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── ADMISSIONS ───────────────────────── -->
+    <section class="section" id="admissions">
+        <div class="section-header">
+            <div class="section-icon">📝</div>
+            <h2 class="section-title">Admissions</h2>
+        </div>
+
+        <p>UFAR admits students through a competitive entrance process. The application is entirely online and the process includes document submission, entrance examination, and (for some programs) an interview. International students are welcome to apply.</p>
+
+        <h3>Application Period — 2025–2026 Academic Year</h3>
+        <div class="info-box">
+            <h3>📅 Registration: March 3 – May 31, 2025</h3>
+            <p>Applications are submitted exclusively online at <a href="https://bureau.ufar.am" target="_blank">https://bureau.ufar.am</a></p>
+            <p>Bachelor's programs: January–May | Master's programs: October–December (check official site for exact dates).</p>
+        </div>
+
+        <h3>Required Documents</h3>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>#</th><th>Document</th><th>Notes</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>High school diploma or 12th-grade enrollment certificate</td><td>Scanned copy</td></tr>
+                    <tr><td>2</td><td>Passport or National ID Card</td><td>Scanned copy; birth certificates not accepted</td></tr>
+                    <tr><td>3</td><td>Official photo (3×4 cm)</td><td>JPG format only</td></tr>
+                    <tr><td>4</td><td>Military Registration Certificate or Military Booklet</td><td>Armenian citizens only</td></tr>
+                    <tr><td>5</td><td>Admission fee payment receipt</td><td>7,500 AMD; can be paid online during application</td></tr>
+                    <tr><td>6</td><td>Additional diplomas/certificates (if applicable)</td><td>Per sections 2.1.7 and 2.1.10 of UFAR Admission Regulations</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Payment Details (Admission Fee)</h3>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Field</th><th>Details</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Recipient</strong></td><td>French University in Armenia</td></tr>
+                    <tr><td><strong>Address</strong></td><td>10 Davit Anhaght St., Yerevan, Armenia</td></tr>
+                    <tr><td><strong>TIN</strong></td><td>01002296</td></tr>
+                    <tr><td><strong>Bank</strong></td><td>ACBA Bank CJSC</td></tr>
+                    <tr><td><strong>Account</strong></td><td>220303350015000</td></tr>
+                    <tr><td><strong>Payment Purpose</strong></td><td>"Admission — Applicant's Last Name First Name Patronymic"</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Entrance Examinations by Faculty</h3>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Faculty</th><th>Examination Subjects</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Law</strong></td>
+                        <td>Social Studies; Armenian Language</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Management</strong></td>
+                        <td>Mathematics; Foreign Language (French, English, or German) OR Armenian Language</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Finance</strong></td>
+                        <td>Mathematics; Foreign Language (French, English, or German) OR Armenian Language</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Marketing & Digital Business</strong></td>
+                        <td>Mathematics; Foreign Language (French, English, or German) OR Armenian Language</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Computer Science (IMA)</strong></td>
+                        <td>Advanced Mathematics; Foreign Language (French, English, or German)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── TUITION ───────────────────────────── -->
+    <section class="section" id="tuition">
+        <div class="section-header">
+            <div class="section-icon">💳</div>
+            <h2 class="section-title">Tuition Fees & Scholarships</h2>
+        </div>
+
+        <p>UFAR's tuition fees are deliberately calibrated to the <strong>standard of living in Armenia</strong>, making European-quality education accessible. Compared to universities in Europe or North America, UFAR offers a significantly more affordable pathway to a French-recognized degree.</p>
+
+        <h3>Bachelor's Tuition Fees — 2025–2026 Academic Year</h3>
+        <div class="two-col">
+            <div>
+                <h4>Faculties of Law, Management, Finance & Marketing</h4>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Year</th><th>Annual Fee (AMD)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>1st Year</strong></td><td>1,000,000 AMD</td></tr>
+                            <tr><td><strong>2nd Year</strong></td><td>1,035,000 AMD</td></tr>
+                            <tr><td><strong>3rd Year</strong></td><td>1,050,000 AMD</td></tr>
+                            <tr><td><strong>4th Year</strong></td><td>1,100,000 AMD</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h4>Faculty of Computer Science & Applied Mathematics (IMA)</h4>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Year</th><th>Annual Fee (AMD)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>1st Year</strong></td><td>1,120,000 AMD</td></tr>
+                            <tr><td><strong>2nd Year</strong></td><td>1,150,000 AMD</td></tr>
+                            <tr><td><strong>3rd Year</strong></td><td>1,200,000 AMD</td></tr>
+                            <tr><td><strong>4th Year</strong></td><td>1,250,000 AMD</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h3>Scholarships & Financial Aid</h3>
+        <p>
+            UFAR provides <strong>excellence scholarships</strong> to its highest-achieving students, enabling them to fully or partially cover tuition fees. <strong>Need-based financial aid</strong> is also available for students with challenging social circumstances, thanks to contributions from private donors and partner organizations including the <strong>Bullukian Foundation</strong>.
+        </p>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🏆 Excellence Scholarships</h3>
+                <p>Awarded to top-performing students based on academic achievement. Can cover partial or full tuition fees.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🤝 Need-Based Aid</h3>
+                <p>Available for students with financial hardship, funded by private donors and partner organizations such as the Bullukian Foundation.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🌍 International Scholarships</h3>
+                <p>UFAR offers various scholarships to both Armenian and international students based on academic merit and financial need, reducing barriers to entry for diverse students.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── INTERNSHIPS ───────────────────────── -->
+    <section class="section" id="internships">
+        <div class="section-header">
+            <div class="section-icon">🏢</div>
+            <h2 class="section-title">Internships & Professional Training</h2>
+        </div>
+
+        <p>
+            Internships are a <strong>mandatory, evaluated component</strong> of every Bachelor's and Master's program at UFAR. They can be carried out in Armenia, France, Belgium, or other countries. Students submit a formal internship report, and in some programs, orally defend their work.
+        </p>
+
+        <h3>Internship Duration by Program</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Program</th><th>Internship Duration</th><th>Location</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Bachelor's — Law, Management, Marketing, IMA</strong></td><td>7 weeks (full-time) — end of bachelor's cycle</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Bachelor's — Finance</strong></td><td>26 weeks (7 full-time + part-time) — final year</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Master's — Computer Science / AI (Year 1)</strong></td><td>2 months</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Master's — Computer Science / AI (Year 2)</strong></td><td>Minimum 5 months (in lab or company)</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Master's — Law (Year 1)</strong></td><td>14 weeks</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Master's — Law (Year 2)</strong></td><td>6 months (mandatory)</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Master's — Finance & Control (Year 1)</strong></td><td>3 months</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Master's — Finance & Control (Year 2)</strong></td><td>6 months</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Master's — Marketing & Sales (Year 1)</strong></td><td>3 months</td><td>Armenia or abroad</td></tr>
+                    <tr><td><strong>Master's — Marketing & Sales (Year 2)</strong></td><td>6 months</td><td>Armenia or abroad</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>UGAB France Partnership — Paris & Lyon Internships</h3>
+        <div class="info-box">
+            <h3>Since 2003: 200+ Students Trained in France</h3>
+            <p>
+                Since 2003, the <strong>Armenian General Benevolent Union (UGAB France)</strong>, with support from the <strong>Bullukian Foundation</strong>, has partnered with UFAR to offer <strong>30 selected students annually</strong> the opportunity to complete their mandatory 7-week internship in a <strong>French company or public institution</strong> in Paris or Lyon. In 15 years, more than 200 students have benefited from this program.
+            </p>
+            <p>
+                The internships offer a unique experience in the French professional world, encouraging the success and future employment integration of Armenian students. They build personal and cultural ties between Armenia and France and introduce students to French entrepreneurial methods and professional culture.
+            </p>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── STUDENT LIFE ──────────────────────── -->
+    <section class="section" id="student-life">
+        <div class="section-header">
+            <div class="section-icon">🎉</div>
+            <h2 class="section-title">Student Life & Campus</h2>
+        </div>
+
+        <p>
+            UFAR's campus life is vibrant and inclusive, reflecting a diverse student body from varied social and cultural backgrounds. The university encourages active participation in cultural events, workshops, academic seminars, and extracurricular activities.
+        </p>
+
+        <div class="two-col">
+            <div>
+                <h3>Campus Facilities</h3>
+                <div class="career-list">
+                    <span class="career-tag">🏫 Modern Classrooms</span>
+                    <span class="career-tag">📚 Library</span>
+                    <span class="career-tag">💻 Computer Labs</span>
+                    <span class="career-tag">☕ Cafeteria</span>
+                    <span class="career-tag">📐 Study Spaces</span>
+                    <span class="career-tag">🖥️ Administrative Services</span>
+                </div>
+                <p style="margin-top:1rem; font-size:0.92rem;">UFAR does not provide on-campus student housing, but offers assistance in finding accommodation in Yerevan near both campuses.</p>
+            </div>
+            <div>
+                <h3>Student Council (Conseil des Étudiants)</h3>
+                <p style="font-size:0.93rem;">
+                    The <strong>Student Council (CE)</strong> of UFAR is an autonomous representative body composed of elected students. It promotes and protects student interests, fosters active participation in university life, and coordinates the activities of all clubs and student unions. The CE collaborates with other higher education institutions in Armenia and abroad, and develops student-focused projects to familiarize students with their rights and responsibilities.
+                </p>
+            </div>
+        </div>
+
+        <h3>Student Organizations & Activities</h3>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🎓 Academic Clubs</h3>
+                <p>Faculty-specific academic societies where students deepen knowledge, organize lectures, and collaborate on research projects.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>⚽ Sports & Recreation</h3>
+                <p>Regular sports events and inter-university tournaments fostering healthy competition and team spirit among students.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🎭 Cultural Events</h3>
+                <p>French and Armenian cultural festivals, language days, film screenings, and artistic events celebrating the Franco-Armenian heritage of the institution.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🤝 Networking & Employer Events</h3>
+                <p>Organized meetings with employers, guest lectures by industry professionals, and career fairs connecting students with potential employers.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🌍 International Exchange</h3>
+                <p>Exchange programs with partner universities in France and other countries, providing students with international academic and cultural experience.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>📰 Student Publications</h3>
+                <p>Student-run media projects and publications that develop communication skills and promote campus news and achievements.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── ACCREDITATION ─────────────────────── -->
+    <section class="section" id="accreditation">
+        <div class="section-header">
+            <div class="section-icon">🏅</div>
+            <h2 class="section-title">Accreditation & Recognition</h2>
+        </div>
+
+        <p>UFAR holds multiple forms of institutional and programmatic recognition at both national and international levels.</p>
+
+        <div class="accred-strip">
+            <div class="accred-item"><div class="accred-dot"></div>Ministry of Education, Science, Culture and Sport of the Republic of Armenia (institutional accreditation)</div>
+            <div class="accred-item"><div class="accred-dot" style="background:var(--red)"></div>UN PRME — First & Only in Armenia</div>
+            <div class="accred-item"><div class="accred-dot" style="background:var(--gold)"></div>Dual Diploma Recognition by French Ministry of Higher Education</div>
+            <div class="accred-item"><div class="accred-dot"></div>European Quality Assurance Forum</div>
+        </div>
+
+        <h3>🌐 UN PRME — Principles for Responsible Management Education</h3>
+        <p>
+            UFAR is the <strong>first and only university in Armenia</strong> to receive international accreditation under the United Nations' <strong>Principles for Responsible Management Education (PRME)</strong> initiative. PRME is a global movement to develop responsible leadership through management education aligned with the UN Sustainable Development Goals (SDGs). As UN Secretary-General António Guterres noted: the PRME initiative was launched to encourage future responsible leaders at a moment when bold and innovative leadership is essential for achieving the Sustainable Development Goals.
+        </p>
+
+        <h3>🇫🇷 French Diploma Recognition</h3>
+        <p>
+            UFAR's dual diploma agreements with <strong>Jean Moulin Lyon 3 University</strong> and <strong>Toulouse III – Paul Sabatier University</strong> ensure that UFAR diplomas are recognized by the French Ministry of Higher Education. This recognition allows graduates to work, continue studies, or pursue academic careers in France and across the European Union.
+        </p>
+
+        <h3>📊 Rankings (2025)</h3>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Ranking System</th><th>Position</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>EduRank — Armenia National Ranking</strong></td><td>#12 in Armenia (EduRank 2026)</td></tr>
+                    <tr><td><strong>EduRank — World Ranking</strong></td><td>#9,474 globally (EduRank 2026)</td></tr>
+                    <tr><td><strong>UniRank — Armenia National Ranking</strong></td><td>#11 in Armenia (UniRank 2025)</td></tr>
+                    <tr><td><strong>UniRank — World Ranking</strong></td><td>#8,803 globally (UniRank 2025)</td></tr>
+                    <tr><td><strong>Enrollment (est.)</strong></td><td>~1,280–1,500 students (2021 data)</td></tr>
+                    <tr><td><strong>Acceptance Rate</strong></td><td>~65%</td></tr>
+                    <tr><td><strong>Gender Ratio</strong></td><td>22% male / 78% female</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── PARTNERSHIPS ──────────────────────── -->
+    <section class="section" id="partnerships">
+        <div class="section-header">
+            <div class="section-icon">🌉</div>
+            <h2 class="section-title">International Partnerships & Cooperation</h2>
+        </div>
+
+        <p>UFAR's international stature is built on deep, multi-decade partnerships with French universities and international organizations, enabling student mobility, faculty exchange, research collaboration, and co-diploma programs.</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🏛️ Jean Moulin Lyon 3 University</h3>
+                <p><strong>Primary partner since founding (1995–2000).</strong> Co-awards dual diplomas in Law, Management, Finance, and Marketing. Sends visiting professors for all four faculties. Basis for the first 3–4 ECTS-compatible programs and dual-degree framework.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🔬 University of Toulouse 3 Paul Sabatier</h3>
+                <p>Partner for the Master's in Artificial Intelligence. Co-awards the French diploma with specialization "Artificial Intelligence: Foundations and Applications." Provides curriculum alignment and visiting professors for the IMA faculty.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🤝 UGAB France (Armenian General Benevolent Union)</h3>
+                <p>Since 2003, UGAB has partnered with UFAR to send 30 students annually on 7-week internships in French companies and public institutions. Over 200 students have participated. Supported also by the Bullukian Foundation.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🇪🇺 Erasmus+ Programme</h3>
+                <p>UFAR participates in Erasmus+ International Credit Mobility (ICM) for student and staff exchanges with European partner universities. Armenia falls under Region 2 (Neighbourhood East) in Erasmus+ geographic classification.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>📚 TEMPUS Projects</h3>
+                <p>UFAR coordinated the TEMPUS project "Promoting quality and recognition of transnational education in Armenia and Georgia," establishing a four-tier management approach and national management teams in both partner countries.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🏭 WBL4JOB (EU-Funded)</h3>
+                <p>UFAR participated in the EU-funded project "Introducing work-based learning in higher education systems of Armenia and Moldova" culminating in the November 2024 conference. Partners included the University of Strasbourg and IMC University of Applied Sciences.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🌍 Agence Universitaire de la Francophonie (AUF)</h3>
+                <p>UFAR has been a member of the <strong>Agence Universitaire de la Francophonie (AUF)</strong> since 2011 — the world's leading network of French-language universities. AUF membership provides access to research grants, collaborative projects, and Francophone academic standards, and requires compliance with AUF quality benchmarks for all programs.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🪑 Francophone Senghor Chair</h3>
+                <p>Since 2011, UFAR hosts the <strong>Chaire Senghor de la Francophonie</strong>, part of the international Senghor Chair network. The chair promotes research, conferences, and French-language education on legal and cultural topics, with a focus on comparative law and Francophone issues in the South Caucasus — including conferences on surrogate motherhood, corporate governance, and intellectual property.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>💻 SAP Partnership</h3>
+                <p>UFAR has partnered with <strong>SAP</strong>, the global enterprise software company, to enhance digital skills training for students. This industry link provides students with practical exposure to leading enterprise technologies and strengthens employability in the IT and finance sectors.</p>
+            </div>
+        </div>
+
+        <h3>Embassy & Government Governance</h3>
+        <p>
+            UFAR's Board of Directors includes representatives from:
+        </p>
+        <div class="career-list">
+            <span class="career-tag">French Embassy in Armenia</span>
+            <span class="career-tag">French Ministry of Foreign Affairs</span>
+            <span class="career-tag">French Ministry of Higher Education</span>
+            <span class="career-tag">Armenian Ministry of Foreign Affairs</span>
+            <span class="career-tag">Armenian Ministry of Education, Science, Culture and Sport</span>
+        </div>
+        <p style="margin-top:1rem;">
+            By decision of the French Ministry of External and European Affairs, a position for an <strong>international volunteer</strong> was also established at UFAR, further deepening the institutional Franco-Armenian link.
+        </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── CAREERS ───────────────────────────── -->
+    <section class="section" id="careers">
+        <div class="section-header">
+            <div class="section-icon">💼</div>
+            <h2 class="section-title">Career Outcomes & Graduate Success</h2>
+        </div>
+
+        <p>UFAR graduates are among the most sought-after in Armenia's public and private sectors. The university's strong employer partnerships, mandatory internship program, and Franco-Armenian dual diploma give graduates a distinctive competitive advantage.</p>
+
+        <div class="highlight-row">
+            <div class="highlight-pill"><strong>90%+</strong><span>Find employment within 1 year</span></div>
+            <div class="highlight-pill"><strong>3%</strong><span>Actively seeking jobs (2023)</span></div>
+            <div class="highlight-pill"><strong>82%+</strong><span>Employment rate (2016 survey)</span></div>
+            <div class="highlight-pill"><strong>3,200+</strong><span>Alumni in leadership roles</span></div>
+        </div>
+
+        <h3>Career Outcomes by Faculty</h3>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Faculty</th><th>Graduate Career Paths</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Computer Science (IMA)</strong></td>
+                        <td>Application Developer, Programmer, Project Manager, IT Security Officer, Database Administrator, Network Administrator</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Law</strong></td>
+                        <td>Lawyer, Notary, Judge, Legal Advisor (banks/NGOs/insurance), International Organizations, National Security, Legal Research</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Management</strong></td>
+                        <td>Economist, Financial Manager, Banking & Insurance Specialist, Financial Analyst, Financial Advisor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Marketing</strong></td>
+                        <td>Marketing/Sales Director, Commercial Director, Brand Manager, PR Manager, Business Analyst, Advertising Agency Director</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Finance</strong></td>
+                        <td>Financial Manager, Accountant, Auditor, Financial Analyst, Statistician-Economist Analyst</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Master's</strong></td>
+                        <td>Aviation & Space Sector, Healthcare AI, Robotics, Smart City Development, Industry 4.0, Scientific Research</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Career Support Services</h3>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🧭 Career Counseling</h3>
+                <p>Professional development guidance, CV workshops, and career orientation sessions are available to all students.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>👔 Job Placement</h3>
+                <p>UFAR collaborates with Armenian and French organizations to provide job placement support. The alumni network is active and supportive across industries.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🏭 Employer Partnerships</h3>
+                <p>Regular organized meetings with employers, guest lectures by industry leaders, and company-sponsored group projects in the Master's programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── RESEARCH ──────────────────────────── -->
+    <section class="section" id="research">
+        <div class="section-header">
+            <div class="section-icon">🔭</div>
+            <h2 class="section-title">Research & Innovation</h2>
+        </div>
+
+        <p>
+            UFAR places strong emphasis on research-driven education, with students at both undergraduate and graduate levels encouraged to participate in interdisciplinary projects and contribute to published research. The university's partnerships with French institutions provide students and faculty with access to cutting-edge research environments and international academic conferences.
+        </p>
+
+        <div class="info-box">
+            <h3>🪑 Chaire Senghor de la Francophonie (est. 2011)</h3>
+            <p>Since 2011, UFAR has hosted the <strong>Chaire Senghor de la Francophonie</strong> — part of the International Network of Senghor Chairs of Francophonie. The chair supports academic research, conferences, and French-language education on Francophone legal and cultural issues, with specific focus on topics such as surrogate motherhood, corporate governance, and intellectual property in the Caucasus. It is a key pillar of UFAR's research identity and Francophone mission.</p>
+        </div>
+
+        <div class="two-col">
+            <div>
+                <h3>Research Highlights</h3>
+                <p>UFAR hosted a round table on <em>"Franco-Armenian Collaboration in High-Performance Artificial Intelligence: Assessment and Perspectives,"</em> underlining its positioning at the frontier of AI research in the South Caucasus. Faculty publications include a recently launched scientific work on <em>Criminal Procedure of the Republic of Armenia</em>.</p>
+                <p>The university participated in the ARMDOCT national capacity-building project financed by the European Union, reinforcing its doctoral and research capabilities.</p>
+            </div>
+            <div>
+                <h3>Green IT & Sustainability</h3>
+                <p>UFAR has engaged in reflections on <strong>Green IT in Armenian higher education</strong>, participating in the AIM congress. As Armenia's first PRME-accredited university, UFAR integrates sustainability and responsible management principles throughout its curricula and institutional practices.</p>
+                <p>In the AI Master's, the signature group <strong>"Masterpiece" project</strong> (S9–S10) requires students to apply AI knowledge to complex, real-world problems proposed by the university or partner companies — a cornerstone of UFAR's innovation culture.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── RECENT NEWS ──────────────────────────── -->
+    <section class="section" id="news">
+        <div class="section-header">
+            <div class="section-icon">📰</div>
+            <h2 class="section-title">Recent News & Developments</h2>
+        </div>
+
+        <p>UFAR remains active in academic innovation, cultural diplomacy, and student initiatives. Below are key recent developments as of 2025–2026.</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🎓 25th Anniversary Celebration (September 16, 2025)</h3>
+                <p>UFAR held its landmark 25th-anniversary graduation ceremony at the <strong>Yerevan Opera</strong>. The event — covered by <em>Le Courrier d'Erevan</em> — celebrated UFAR's role as a pillar of Franco-Armenian friendship and highlighted the graduating class's <strong>&gt;97% employment rate</strong>. The ceremony marked a quarter century of delivering European-standard degrees from Yerevan.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🤖 "AI for Good" Hackathon (June 2025)</h3>
+                <p>UFAR organized an <strong>"AI for Good" hackathon</strong> on campus in June 2025, bringing together students, faculty, and industry partners to develop AI-driven solutions for social challenges. The event underlines UFAR's growing emphasis on applied AI education through its Master's in Artificial Intelligence (in partnership with Toulouse 3 Paul Sabatier).</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🇪🇺 Erasmus+ Scholarships for 2026</h3>
+                <p>UFAR announced new <strong>Erasmus+ International Credit Mobility scholarships</strong> for the 2025–2026 academic year. These grants enable UFAR students to study at European partner universities and welcome incoming Erasmus+ students to Yerevan, strengthening UFAR's role in the broader European Higher Education Area.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>👩‍💼 New Rector: Salwa Nacouzi (2022–present)</h3>
+                <p>In September 2022, <strong>Salwa Nacouzi</strong>, a career French cultural diplomat and former advisor at the French Embassy in Iraq, became UFAR's Rector — succeeding Bertrand Venard of Lyon 3. Her appointment, per UFAR's founding regulations, was made by the <strong>French government</strong>. Her tenure has renewed emphasis on Franco-Armenian academic ties and international cultural outreach.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>📊 WBL4JOB Conference (November 2024)</h3>
+                <p>UFAR hosted the concluding conference for the EU-funded <strong>WBL4JOB project</strong> (November 20–22, 2024), showcasing the Apprenticeships Higher Education Model (AHEM) developed jointly with the University of Strasbourg, IMC University of Applied Sciences, and Lyon 3. The project introduced work-based learning into Armenian and Moldovan higher education systems to improve graduate employability.</p>
+            </div>
+            <div class="card">
+                <div class="card-accent"></div>
+                <h3>🌐 European Quality Assurance Forum (2025)</h3>
+                <p>UFAR's <strong>dual-accreditation model</strong> was highlighted at the European Quality Assurance Forum in 2025. The university's use of Franco-Armenian co-accreditation — combining Armenian MESCS oversight with French partner university validation and AUF standards — was presented as a model for transnational higher education quality assurance.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── FAQ ───────────────────────────────── -->
+    <section class="section" id="faq">
+        <div class="section-header">
+            <div class="section-icon">❓</div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Why should I choose UFAR?</div>
+            <div class="faq-a">UFAR offers high-quality French and Armenian bilingual education with internationally recognized dual degrees (both Armenian and French state diplomas), strong career prospects, mandatory internships in France or Armenia, and direct access to the Francophone professional world — all at tuition fees calibrated to the Armenian standard of living.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Is a UFAR diploma recognized internationally?</div>
+            <div class="faq-a">Yes. UFAR diplomas are co-awarded in partnership with Jean Moulin Lyon 3 University (Law, Management, Finance, Marketing) and the University of Toulouse 3 Paul Sabatier (Computer Science / AI Master's), making them officially recognized by the French Ministry of Higher Education and valid throughout the European Union and beyond.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Do I need to speak French to apply?</div>
+            <div class="faq-a">No. French proficiency is not required at the time of admission. UFAR provides intensive French language training during the first two years. Approximately 90% of students who had no prior French become capable of continuing their studies in French by the third year.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Does UFAR provide scholarships?</div>
+            <div class="faq-a">Yes. UFAR offers excellence scholarships for top-performing students and need-based financial aid for students with challenging social circumstances, thanks to private donors and partner organizations such as the Bullukian Foundation and UGAB.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Can I complete my internship in France?</div>
+            <div class="faq-a">Yes. All Bachelor's and Master's internships can be completed in Armenia, France, Belgium, or other countries. UGAB France provides 30 students annually with the opportunity to intern in French companies and public institutions.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Does UFAR have exchange programs?</div>
+            <div class="faq-a">Yes. UFAR participates in Erasmus+ International Credit Mobility and has bilateral agreements with partner universities in France and other countries, allowing students to study abroad and gain international experience.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What student clubs and organizations exist at UFAR?</div>
+            <div class="faq-a">UFAR has an active Student Council (Conseil des Étudiants) that coordinates sports clubs, cultural organizations, academic societies, and other student unions. Regular activities include sports events, cultural festivals, employer networking events, and guest lectures.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Does UFAR provide student housing?</div>
+            <div class="faq-a">UFAR does not have on-campus housing, but the university assists students in finding accommodation in Yerevan near both campuses (Davit Anhaght Street and Paruyr Sevak Street).</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What are the official working hours for the administration?</div>
+            <div class="faq-a">Monday to Friday, 09:00–17:45. You can also reach UFAR by phone, email, or through the online student portal at bureau.ufar.am.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Is the AI Master's program only for UFAR graduates?</div>
+            <div class="faq-a">No. The Master's in Artificial Intelligence accepts both UFAR graduates and external applicants. It is the only AI Master's in Armenia that confers the right to military service deferment by government decision.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What makes UFAR unique compared to other universities in Armenia?</div>
+            <div class="faq-a">UFAR is the only institution in Armenia to offer Franco-Armenian dual state diplomas, the only university with UN PRME accreditation, the only institution where both the Rector and Secretary General are required to be French nationals, and one of very few Armenian universities providing full transnational education with extensive quality assurance experience.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What postgraduate options are available after a UFAR Bachelor's?</div>
+            <div class="faq-a">Graduates can continue at UFAR with a Master's degree (Law, Management, Finance, Marketing, or AI/Computer Science), or pursue further education at French partner universities (Lyon 3, Toulouse 3) or other institutions in Europe. PhD programs in Law, Marketing, and Management are also available at UFAR.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">How can I contact UFAR administration?</div>
+            <div class="faq-a">Phone (Communications): +374 10 249647 | Admissions Mobile: +374 98 279672 | Fax: +374 10 249645 | Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7d6d3dadec4c4ded8d9c4f7c2d1d6c599d6da">[email&#160;protected]</a> | Web: www.ufar.am | Portal: bureau.ufar.am</div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── NUMBERS ────────────────────────────── -->
+    <section class="section" id="numbers">
+        <div class="section-header">
+            <div class="section-icon">📊</div>
+            <h2 class="section-title">UFAR in Numbers</h2>
+        </div>
+
+        <div class="highlight-row">
+            <div class="highlight-pill"><strong>2,200+</strong><span>Current Students</span></div>
+            <div class="highlight-pill"><strong>3,200+</strong><span>Alumni Worldwide</span></div>
+            <div class="highlight-pill"><strong>90%+</strong><span>Graduate Employment (1 yr)</span></div>
+            <div class="highlight-pill"><strong>3%</strong><span>Seeking Jobs (2023)</span></div>
+            <div class="highlight-pill"><strong>5</strong><span>Faculties</span></div>
+            <div class="highlight-pill"><strong>25+</strong><span>Years of Excellence</span></div>
+            <div class="highlight-pill"><strong>200+</strong><span>France Interns (UGAB)</span></div>
+            <div class="highlight-pill"><strong>1st</strong><span>UN PRME in Armenia</span></div>
+            <div class="highlight-pill"><strong>2</strong><span>Campus Locations</span></div>
+            <div class="highlight-pill"><strong>22:78</strong><span>Male / Female Ratio</span></div>
+        </div>
+
+        <h3>Graduate Employment Breakdown</h3>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Metric</th><th>Value</th><th>Source / Year</th></tr></thead>
+                <tbody>
+                    <tr><td>Employment within 1 year of graduation</td><td><strong>&gt;90%</strong></td><td>UFAR official data (2023)</td></tr>
+                    <tr><td>Graduates actively seeking employment</td><td><strong>~3%</strong></td><td>UFAR survey (2023)</td></tr>
+                    <tr><td>Graduate employment rate (broader survey)</td><td><strong>&gt;82%</strong></td><td>TNE-QA survey (2016)</td></tr>
+                    <tr><td>Students pursuing further education abroad</td><td><strong>Significant portion of graduates</strong></td><td>UFAR official</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── CONTACT ───────────────────────────── -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <div class="section-icon">📍</div>
+            <h2 class="section-title">Contact & Location</h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">🏛️</div>
+                <div>
+                    <strong>Main Campus</strong>
+                    <span>10 Davit Anhaght Street, 0037 Yerevan, Armenia<br>(Kanaker-Zeytun district)</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">💻</div>
+                <div>
+                    <strong>IMA Campus (Computer Science)</strong>
+                    <span>1 Paruyr Sevak Street, Yerevan, Armenia<br>(Kanaker-Zeytun district)</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <strong>Communications</strong>
+                    <span>+374 10 249647</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div>
+                    <strong>Admissions (Mobile)</strong>
+                    <a href="tel:+37498279672">+374 98 279672</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🖨️</div>
+                <div>
+                    <strong>Fax</strong>
+                    <span>+374 10 249645</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <strong>Admissions Email</strong>
+                    <a href="/cdn-cgi/l/email-protection#056461686c76766c6a6b7645706364772b6468"><span class="__cf_email__" data-cfemail="abcacfc6c2d8d8c2c4c5d8ebdecdcad985cac6">[email&#160;protected]</span></a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div>
+                    <strong>Official Website</strong>
+                    <a href="https://www.ufar.am" target="_blank">www.ufar.am</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📋</div>
+                <div>
+                    <strong>Student Portal / Applications</strong>
+                    <a href="https://bureau.ufar.am" target="_blank">bureau.ufar.am</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🕐</div>
+                <div>
+                    <strong>Office Hours</strong>
+                    <span>Monday – Friday: 09:00–17:45</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🏷️</div>
+                <div>
+                    <strong>Taxpayer ID (TIN)</strong>
+                    <span>01002296</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top:2rem;">
+            <h3>🎓 Current Rector: Salwa Nacouzi</h3>
+            <p>
+                Per UFAR's founding regulations (codified by the 2017 Franco-Armenian bilateral decree), the Rector and Secretary General of UFAR must be <strong>French nationals appointed by the French government</strong> — a unique governance structure that distinguishes UFAR from all comparable Francophone institutions outside France. The Vice-Rector is <strong>Zaruhi Soghomonyan</strong>. The Head of International Relations is <strong>Gohar Ghalachayn</strong>.
+            </p>
+            <p>
+                UFAR operates under <strong>Armenian law</strong> for its Armenian state diplomas and under <strong>French law</strong> for its French diplomas — a dual legal framework that ensures full recognition in both countries. The Board of Directors includes equal numbers of Armenian and French appointees, with representatives from both governments and partner universities.
+            </p>
+        </div>
+    </section>
+
+</div><!-- end wrapper -->
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        <strong>French University in Armenia (UFAR) — Université Française en Arménie</strong><br>
+        10 Davit Anhaght Street, 0037 Yerevan, Armenia &nbsp;|&nbsp; <a href="https://www.ufar.am" style="color:var(--gold-light);" target="_blank">www.ufar.am</a><br><br>
+        A bridge of academic excellence between France and Armenia since 2000.<br>
+        Proud to be Armenia's first UN PRME-accredited institution.<br><br>
+        <span style="font-size:0.8rem; color:rgba(255,255,255,0.4);">
+            Information compiled from UFAR official publications, UFAR_DATA.docx, Wikipedia (French University in Armenia),
